@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:wght@100;300;400;700;900&family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <title>FastSell</title>
+
+    
+</head>
+<body>
+
+
+ 
+
+
+
+      <img class="logotype" src="logo.png" alt="FastSell">
+    <h1>Хиты продаж</h1>
+
+    <menu class="menu-main">
+ 
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="Games/index.html">Games</a></li>
+     
+    </menu>
+
+      <!-- Общий контейнер для игр -->
+    <div class="games-container">
+        
+        <div class="gta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxybRCLiQ4xCUZpfrsJblsmnvQ2pPtJKzZ9iMpkvbsRw&s">
+            <a href="Games/payment/index.html"><button class="gtabut">Купить 1999руб</button></a>
+        </div>
+
+        <div class="farcry">
+            <img src="https://upload.wikimedia.org/wikipedia/ru/d/d6/Far_cry_6.jpeg?utm_source=ru.wikipedia.org&utm_campaign=index&utm_content=original">
+            <a href="Games/payment/index.html"><button class="farcrybut">Купить 1999руб</button></a>
+            
+        </div>
+
+        <div class="heart">
+            <img src="https://avatars.mds.yandex.net/get-mpic/15243080/game_badge_2a4398bf-8e46-4bef-9f58-910cd2e1e94d/orig">
+            <a href="Games/payment/index.html">
+                <button class="heartbut">Купить 1299руб</button>
+            </a>
+        </div>
+
+    </div> <!-- /games-container -->
+
+
+    <div class="games-container2">
+
+        <div class="beamng">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB6rrdQzxuU0wE0d2h37J8-CCUfFZ55__cY13ipjdHuw&s=10">
+            <a href="Games/payment/index.html">
+                <button class="beambut">Купить 899руб</button>
+            </a>
+        </div>
+
+        <div class="steam">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuqx6Kl2jTXAISvVwhjai3Gz7CSne0F3F0oHOl243Lig&s=10">
+            <a href="Games/payment/index.html">
+                <button class="steambut">Купить (1 Steam RUB = 1.8руб)</button>
+            </a>
+
+        </div>
+
+        <div class="forza">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3eTRClhbMdrniNJTCO3yQNyplrr3_0EwuxQbmIEFVyA&s=10">
+            <a href="Games/payment/index.html">
+                <button class="forzabut">Купить 1199руб</button>
+            </a>
+        </div>
+
+
+        <div class="cyber">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTABfX4nv28kQPfnHxgg-tKoedhi-hT_Z8_L5kv_5lytQ&s=10">
+            <a href="Games/payment/index.html">
+                <button class="cyberbut">Купить 1199руб</button>
+            </a>
+        </div>
+    </div>
+
+
+            <div class="menubut">
+                <a href="https://t.me/viewshoptechsupport">
+                    <button class="menubtn">Поддержка</button>
+                </a>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+  <script>
+    const body = document.body;
+
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      body.style.setProperty('--x', x + '%');
+      body.style.setProperty('--y', y + '%');
+    });
+
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      const x = (touch.clientX / window.innerWidth) * 100;
+      const y = (touch.clientY / window.innerHeight) * 100;
+      body.style.setProperty('--x', x + '%');
+      body.style.setProperty('--y', y + '%');
+    }, { passive: true });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Структура модального окна -->
+  <div id="myModal">
+    <div class="modal-content">
+      <label class="checkbox-label">
+        <input type="checkbox" id="closeCheckbox">
+        Соглашаюсь с политикой сайта
+      </label>
+    </div>
+  </div>
+
+  <!-- Подключаем логику скрипта JS -->
+  <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+</body>
+</html>

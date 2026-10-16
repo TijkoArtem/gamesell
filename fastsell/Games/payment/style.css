@@ -1,0 +1,501 @@
+/* ============================================================
+   GAMESTORE — премиальный магазин игр
+   Чистый, современный, доверительный дизайн
+   ============================================================ */
+
+/* ---------- RESET ---------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- BODY / ФОН ---------- */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1d24;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #f4f7fb;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(46, 204, 113, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 80%, rgba(52, 152, 219, 0.08) 0%, transparent 45%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------- ГЛАВНАЯ КАРТОЧКА ---------- */
+.payment-card {
+  width: 100%;
+  max-width: 640px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 44px 52px;
+  border: 1px solid #e6ebf2;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 12px 32px -8px rgba(16, 24, 40, 0.08),
+    0 32px 64px -16px rgba(16, 24, 40, 0.06);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Декоративная полоска сверху */
+.payment-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2ecc71, #27ae60, #1abc9c);
+}
+
+/* ---------- ЗАГОЛОВОК H1 ---------- */
+h1 {
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #475467;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 br {
+  display: none;
+}
+
+/* ---------- БЛОК QR-КОДА ---------- */
+.qr-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 36px;
+  padding: 24px;
+  background: #f9fbfd;
+  border: 1px solid #e6ebf2;
+  border-radius: 20px;
+  position: relative;
+}
+
+.qr-wrapper::after {
+  content: 'Безопасная оплата';
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  padding: 4px 16px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2ecc71;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid #d1f2e0;
+  white-space: nowrap;
+}
+
+.qr-wrapper img {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 8px;
+  border: 1px solid #e6ebf2;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.qr-wrapper img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px -6px rgba(46, 204, 113, 0.25);
+}
+
+/* ---------- ПОДЗАГОЛОВОК H2 ---------- */
+h2 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #98a2b3;
+  margin: 0 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+h2::before,
+h2::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  max-width: 80px;
+  background: linear-gradient(90deg, transparent, #e6ebf2, transparent);
+}
+
+/* ---------- КОНТЕЙНЕР КНОПКИ ---------- */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.button-container a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* ---------- КНОПКА ОПЛАТЫ ---------- */
+.btn-pay {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 32px;
+  font-family: inherit;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.06),
+    0 8px 20px -6px rgba(46, 204, 113, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-pay::after {
+  content: '→';
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: transform 0.2s ease;
+  line-height: 1;
+}
+
+.btn-pay:hover {
+  background: linear-gradient(180deg, #34d97b 0%, #2bbf6a 100%);
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.06),
+    0 12px 28px -6px rgba(46, 204, 113, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-pay:hover::after {
+  transform: translateX(4px);
+}
+
+.btn-pay:active {
+  transform: translateY(0);
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.06),
+    0 4px 12px -4px rgba(46, 204, 113, 0.5);
+}
+
+/* ---------- ПОПАП TBANK ---------- */
+#tbank-pop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 24, 40, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  animation: popFadeIn 0.25s ease;
+}
+
+@keyframes popFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.popup-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  position: relative;
+  box-shadow:
+    0 24px 48px -12px rgba(16, 24, 40, 0.25),
+    0 0 0 1px rgba(16, 24, 40, 0.04);
+  animation: popSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.popup-card::before {
+  content: '💳';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 16px;
+  background: #e8f8ef;
+  border-radius: 50%;
+  font-size: 1.75rem;
+}
+
+.popup-card p {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #1a1d24;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.popup-card p::after {
+  content: 'Это гарантирует безопасность вашей оплаты.';
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #667085;
+  margin-top: 8px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: #98a2b3;
+  background: #f9fbfd;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.popup-close:hover {
+  background: #eef2f6;
+  color: #475467;
+}
+
+/* ---------- ГЛОБАЛЬНЫЕ ССЫЛКИ ---------- */
+a {
+  color: inherit;
+}
+
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+
+/* Планшеты */
+@media (max-width: 768px) {
+  body {
+    padding: 24px 16px;
+  }
+
+  .payment-card {
+    padding: 36px 28px 40px;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 1rem;
+    margin-bottom: 28px;
+  }
+
+  h1 br {
+    display: inline;
+  }
+
+  .qr-wrapper {
+    padding: 18px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+
+  .qr-wrapper img {
+    max-width: 220px;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+    margin-bottom: 18px;
+  }
+}
+
+/* Телефоны */
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+    align-items: flex-start;
+    padding-top: 28px;
+  }
+
+  .payment-card {
+    padding: 28px 20px 32px;
+    border-radius: 16px;
+  }
+
+  h1 {
+    font-size: 0.9375rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .qr-wrapper {
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 28px;
+  }
+
+  .qr-wrapper img {
+    max-width: 180px;
+  }
+
+  .qr-wrapper::after {
+    font-size: 0.6875rem;
+    padding: 3px 12px;
+    bottom: -10px;
+  }
+
+  h2 {
+    font-size: 0.6875rem;
+    letter-spacing: 0.06em;
+  }
+
+  h2::before,
+  h2::after {
+    max-width: 40px;
+  }
+
+  .button-container a {
+    max-width: 100%;
+  }
+
+  .btn-pay {
+    font-size: 1rem;
+    padding: 16px 24px;
+    border-radius: 12px;
+  }
+
+  .popup-card {
+    padding: 32px 24px 24px;
+    border-radius: 16px;
+  }
+
+  .popup-card p {
+    font-size: 1rem;
+  }
+
+  .popup-card p::after {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Очень маленькие телефоны */
+@media (max-width: 360px) {
+  .payment-card {
+    padding: 24px 16px 28px;
+  }
+
+  .qr-wrapper img {
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 0.875rem;
+  }
+
+  .btn-pay {
+    font-size: 0.9375rem;
+    padding: 14px 20px;
+  }
+}
+
+
+
+ #copyText{
+ 
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(198, 196, 196, 0.475);
+  position: fixed; top: 50px; left: 45%;
+  transform: translateX(-30%);
+
+  font-size: 40px;
+}
+
+#message{
+   position: fixed; top: 150px; left: 47%;
+   font-size: 30px;
+}
+
+
+@media screen and (max-width: 490px) {
+  #copyText {
+    font-size: 25px;
+    margin: 0 auto;
+
+  }
+}
+
+
+
+@media  screen and (max-width: 476px) {
+
+   #copyText {
+    top: 550px;
+    font-size: 25px;
+    margin: 0 auto;
+    
+
+  }
+}
